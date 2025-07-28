@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Countdown to Otakon</title>
+  <title>Countdown to Otakon 2025</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
+      background-color: #f0f0f0;
+    }
+    #countdown-container {
+      width: 80%;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    #countdown {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    #otakon-logo {
+      width: 100px;
+      height: 100px;
+      margin: 20px auto;
     }
   </style>
 </head>
 <body>
-  <h1>Countdown to Otakon</h1>
-  <div id="countdown"></div>
+  <div id="countdown-container">
+    <h1>Countdown to Otakon 2025</h1>
+    <img id="otakon-logo" src="https:                                             
+    <div id="countdown"></div>
+  </div>
   <script>
     const targetDate = new Date('August 7, 2025 00:00:00').getTime();
     const countdownElement = document.getElementById('countdown');
@@ -24,7 +47,7 @@
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
       countdownElement.innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
       if (timeLeft < 0) {
-        countdownElement.innerHTML = 'Countdown finished!';
+        countdownElement.innerHTML = 'Otakon is here!';
       }
     }
     setInterval(updateCountdown, 1000);
